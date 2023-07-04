@@ -1,0 +1,25 @@
+===============================
+How to Use 5-text_indentation.py
+===============================
+
+This module defines a function ``text_indentation(text)`` to print a text with additional new lines after certain characters.
+
+Usage
+=====
+
+The function ``text_indentation(text)`` takes a single string argument ``text`` and prints the formatted text with two new lines after each occurrence of the characters ".", "?", and ":".
+
+Example Usage:
+--------------
+
+Here's an example of how to use the ``text_indentation()`` function:
+
+```python
+>>> text = "Hello. How are you? I'm fine."
+>>> text_indentation(text)
+Hello.
+
+How are you?
+
+I'm fine.
+

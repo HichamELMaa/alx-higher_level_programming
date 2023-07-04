@@ -1,0 +1,23 @@
+============================
+How to Use 4-print_square.py
+============================
+
+This module defines a function ``print_square(size)`` to print a square using the character "#".
+
+Usage
+=====
+
+The function ``print_square(size)`` takes a single integer argument ``size`` and prints a square using the character "#". The size specifies the length of each side of the square.
+
+Example Usage:
+--------------
+
+Here's an example of how to use the ``print_square()`` function:
+
+```python
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
