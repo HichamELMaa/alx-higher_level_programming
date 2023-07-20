@@ -2,6 +2,7 @@
 
 """Defines a module that contains class Base."""
 
+
 class Base:
     """Class Base.
 
@@ -24,4 +25,4 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-
+            
