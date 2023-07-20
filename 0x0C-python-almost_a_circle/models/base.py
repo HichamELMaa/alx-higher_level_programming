@@ -70,19 +70,18 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """ Returns a list of instances """
-        filename = "{}.json".format(cls.__name__)
+        """Return a list of classes instantiated from a file of JSON strings.
 
-        if os.path.exists(filename) is False:
+        Reads from `<cls.__name__>.json`.
+
+        Returns:
+            If the file does not exist - an empty list.
+            Otherwise - a list of instantiated classes.
+        """
+        filename = str(cls.__name__) + ".json"
+        try:
+            with open(filename, "r") as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
-
-        with open(filename, 'r') as f:
-            list_str = f.read()
-
-        list_cls = cls.from_json_string(list_str)
-        list_ins = []
-
-        for index in range(len(list_cls)):
-            list_ins.append(cls.create(**list_cls[index]))
-
-        return list_ins
