@@ -1,1 +1,1 @@
-This repository contains programs written for the higher-level programming track at ALX Africa.
+Python is a high level programming language and most of what we do here is going to be python.
